@@ -2,8 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-     <GeneratePackageOnBuild>true</GeneratePackageOnBuild> 
+      <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->  
   </PropertyGroup>
+  
+    <!-- Imports -->
+  <Import Project="build\build.targets" />
 
   <!-- .Pack -->
   <ItemGroup>
@@ -15,15 +18,13 @@
     <None Include=".pack\Dox\file1.txt" />
     <None Include=".pack\Dox\file2.txt" />
     <None Include=".pack\package.targets" />
-    <None Include=".pack\package.csproj" />
+    <!-- <None Include=".pack\package.csproj" /> -->
     <None Include="pack\**;pack\**;pack\*.*;pack\Dox\*.*" />
     <!-- New additions -->
-    <Content Update=".pack\**" Pack="true" IncludeInPackage="true" PackagePath="content\.pack\;contentFiles\.pack\;;" />
-    <Content Update="build\**" Pack="true" IncludeInPackage="true" PackagePath="content\build\;contentFiles\build\;;" />
-    <!-- <Content Update=".pack\**" Pack="true" IncludeInPackage="true" PackagePath="content\any\any\;contentFiles\any\any\;;" /> -->
-    <!-- <Content Update="build\**" Pack="true" IncludeInPackage="true" PackagePath="content\any\any\;contentFiles\any\any\;;" /> -->
-    <!--<Content Update=".pack\**" Pack="true" IncludeInPackage="true" PackagePath="..\content\.pack\**" />
-    <Content Update="build\**" Pack="true" IncludeInPackage="true" PackagePath="..\content\build\**" />-->
+    <Content Update=".pack\**" Pack="true" IncludeInPackage="true" PackagePath="content\any\any\;contentFiles\any\any\;;">
+    </Content>
+    <Content Update="build\build.targets" Pack="true" IncludeInPackage="true" PackagePath="content\any\any\;contentFiles\any\any\;;">    
+    </Content>
     <None Update="build\WeRTheBest.NugLib.targets" PackagePath="build\WeRTheBest.NugLib.targets" />
     <!-- Not sure if I need this -->
   </ItemGroup>
@@ -34,8 +35,7 @@
     <Content Include="build\*.targets" PackagePath="build\" />
   </ItemGroup>
 
-  <!-- Imports -->
-  <Import Project="build\build.targets" />
+
 
   <!-- Removed temporarily! -->
   <!-- <Import Project=".pack\package.csproj" Condition="Exists('.pack\package.csproj')" /> -->

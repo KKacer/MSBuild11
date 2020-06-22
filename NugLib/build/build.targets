@@ -5,9 +5,6 @@
   <!-- ===================================================================================== -->
   <!-- 1. Properties -->
 
-  <PropertyGroup>
-    <NugetLocation>D:\Wylix\NugsRepo</NugetLocation>
-  </PropertyGroup>
 
   <!-- ===================================================================================== -->
   <!-- 2. Imports and usings -->
@@ -16,10 +13,11 @@
 
   <!-- ===================================================================================== -->
 
+
   <!-- ===================================================================================== -->
   <!-- 6. TestVars -->
 
-  <Target Name="TestVars"  BeforeTargets="Build">
+  <Target Name="TestVars"  BeforeTargets="NugetMaker">
 
     <Message Text="Subject 1: '$(PackageId)'" Importance="high" />
 
@@ -29,7 +27,9 @@
     <Message Text="Subject 3: $(Subject)" Importance="high" />
     <Message Text="xOutLocation: $(xOutLocation)" Importance="high" />
     <Message Text="xOutParent: $(xOutParent)" Importance="high" />
-    --><!-- Bugged: <Message Text="xOutParent2: $(xOutParent2)" Importance="high" /> --><!--
+    -->
+    <!-- Bugged: <Message Text="xOutParent2: $(xOutParent2)" Importance="high" /> -->
+    <!--
     <Message Text="xOutParent3: $(xOutParent3)" Importance="high" />
     <Message Text="Lib Folder Address calculated: $(LibFolderAddress)" Importance="high" />
     <Message Text="ZipFile1: $(ZipFile1)" Importance="high" />

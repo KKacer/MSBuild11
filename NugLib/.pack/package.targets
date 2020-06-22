@@ -5,7 +5,7 @@
   </PropertyGroup>
   <!-- Version, Release notes-->
   <PropertyGroup>
-    <Version>0.8.2.7</Version>
+    <Version>0.8.2.13</Version>
     <PackageReleaseNotes>
       tried to make files listed, getting the messages from the targets file
     </PackageReleaseNotes>

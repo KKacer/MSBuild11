@@ -8,8 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="WeRTheBest.NugLib" Version="0.8.2.7" />
+    <PackageReference Include="WeRTheBest.NugLib" Version="0.8.2.13" />
   </ItemGroup>
+
+
 
   <!-- .Pack Folder and the parts -->
 

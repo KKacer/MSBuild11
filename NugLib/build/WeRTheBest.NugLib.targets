@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <!-- <Import Project="..\contentFiles\any\any\.pack\package.targets" /> -->
-  <!-- <Import Project="..\contentFiles\any\any\build\build.targets" /> -->
-  <Import Project="..\contentFiles\.pack\package.targets" />
-  <Import Project="..\contentFiles\build\build.targets" />
+   <Import Project="..\contentFiles\any\any\.pack\package.targets" /> 
+   <Import Project="..\contentFiles\any\any\build\build.targets" /> 
+  <!--<Import Project="..\contentFiles\.pack\package.targets" />
+  <Import Project="..\contentFiles\build\build.targets" />-->
   <!-- seems didn't work, wanted it to be in the next project -->
 
   <!--<Import Project="..\.pack\package.targets" />
